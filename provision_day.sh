@@ -59,5 +59,6 @@ if [ -e "src/day${day}.py" ]; then
 fi
 
 echo "$python_template" > "src/day${day}.py"
+touch "src/day${day}.txt"
 echo "$python_test_template" > "test/test_day${day}.py"
 touch "test/resources/day${day}_input.txt"
