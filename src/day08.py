@@ -1,6 +1,4 @@
-from functools import reduce
-
-from src.common import Solution
+from src.common import Solution, multiply_elements
 
 
 def look_around(y, x, trees):
@@ -51,6 +49,6 @@ class Day08(Solution):
                             break
                     viewing_distances.append(viewing_distance)
                     pass
-                scenic_scores.append(reduce(lambda a, b: a * b, viewing_distances) if viewing_distances != [] else 0)
+                scenic_scores.append(multiply_elements(viewing_distances) if viewing_distances != [] else 0)
 
         return max(scenic_scores)

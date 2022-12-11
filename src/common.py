@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+from functools import reduce
 
 
 def split_into_chunks_of_size(thing, chunk_size):
@@ -27,3 +28,7 @@ class Solution(ABC):
     @abstractmethod
     def part2(self, input):
         pass
+
+
+def multiply_elements(lst):
+    return reduce(lambda a, b: a * b, lst)
